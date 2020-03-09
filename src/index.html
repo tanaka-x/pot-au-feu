@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>port forward</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <script src="./js/index.js"></script>
+</head>
+
+<body>
+  <h1>pot-au-feu</h1>
+  <div>
+    <p>
+      踏み台ユーザー名：<input type="text" id="username" size="40"></input>
+    </p>
+    <p>
+      踏み台パスワード：<input type="password" id="password" size="40"></input>
+    </p>
+    <p>
+      踏み台サーバー名：<input type="text" id="hostname" size="40"></input>
+    </p>
+    <p>
+      踏み台サーバーポート：<input type="text" id="hostport" size="40" value="22"></input>
+    </p>
+    <p>
+      接続先サーバー名：<input type="text" id="dstname" size="40"></input>
+    </p>
+    <p>
+      接続先サーバーポート：<input type="text" id="dstport" size="40" value="22"></input>
+    </p>
+    <p>
+      ローカルでフォワードするポート：<input type="text" id="localport" size="40" value="10022"></input>
+    </p>
+    <textarea id="text" rows="8" cols="50"></textarea>
+  </div>
+  <div>
+    <button id="connect" class="btn btn-success">接続！</button>
+    <button id="disconnect" class="btn btn-success">切断！</button>
+  </div>
+</body>
+
+</html>
