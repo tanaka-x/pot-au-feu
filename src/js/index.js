@@ -7,7 +7,7 @@ let server;
 document.addEventListener('DOMContentLoaded', () => {
     let connect = document.getElementById('connect')
     connect.addEventListener('click', function () {
-        
+
         let username = document.getElementById('username').value
         let password = document.getElementById('password').value
 
@@ -34,11 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         server = tunnel(config, async (err, server) => {
             if (err) {
                 throw err;
+            } else {
+                let connect = document.getElementById('text')
+                connect.value = "connected";
             }
-
-            // ここにトンネリング中に実行したい処理を書く
-            let connect = document.getElementById('text')
-            connect.value = "connected";
         });
     })
     let disconnect = document.getElementById('disconnect')

@@ -4,40 +4,67 @@
 <head>
   <meta charset="UTF-8">
   <title>port forward</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
   <script src="./js/index.js"></script>
 </head>
 
 <body>
-  <h1>pot-au-feu</h1>
-  <div>
-    <p>
-      踏み台ユーザー名：<input type="text" id="username" size="40"></input>
-    </p>
-    <p>
-      踏み台パスワード：<input type="password" id="password" size="40"></input>
-    </p>
-    <p>
-      踏み台サーバー名：<input type="text" id="hostname" size="40"></input>
-    </p>
-    <p>
-      踏み台サーバーポート：<input type="text" id="hostport" size="40" value="22"></input>
-    </p>
-    <p>
-      接続先サーバー名：<input type="text" id="dstname" size="40"></input>
-    </p>
-    <p>
-      接続先サーバーポート：<input type="text" id="dstport" size="40" value="22"></input>
-    </p>
-    <p>
-      ローカルでフォワードするポート：<input type="text" id="localport" size="40" value="10022"></input>
-    </p>
-    <textarea id="text" rows="8" cols="50"></textarea>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Pot-au-feu</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" href="#">reset</a>
+    </nav>
   </div>
+  <div class="container">
+    <dev class="card-deck mb-3 text-center">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+          
+          <div class="mb-3">
+            <label for="username">踏み台ユーザー名</label>
+            <input type="text" class="form-control" id="username" placeholder="" value="" required="">
+          </div>
+          <div class="mb-3">
+            <label for="password">踏み台パスワード</label>
+            <input type="text" class="form-control" id="password" placeholder="" value="" required="">
+          </div>
+          <p>
+            踏み台サーバー名：<input type="text" id="hostname" size="40"></input>
+          </p>
+          <p>
+            踏み台サーバーポート：<input type="text" id="hostport" size="40" value="22"></input>
+          </p>
+          <p>
+            接続先サーバー名：<input type="text" id="dstname" size="40"></input>
+          </p>
+          <p>
+            接続先サーバーポート：<input type="text" id="dstport" size="40" value="22"></input>
+          </p>
+          <p>
+            ローカルでフォワードするポート：<input type="text" id="localport" size="40" value="10022"></input>
+          </p>
+
+        </div>
+
+      </div>
+    </dev>
+  </div>
+  <textarea id="text" rows="8" cols="50"></textarea>
   <div>
-    <button id="connect" class="btn btn-success">接続！</button>
-    <button id="disconnect" class="btn btn-success">切断！</button>
+    <button id="connect" class="btn btn-lg btn-block btn-primary">接続！</button>
+    <button id="disconnect" class="btn btn-lg btn-block btn-outline-primary">切断！</button>
   </div>
 </body>
 
