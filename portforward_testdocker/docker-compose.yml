@@ -1,0 +1,26 @@
+version: "2"
+services:
+  sono1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:50022:22" # ここを変更していく
+  sono2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:51022:22" # ここを変更していく
+  sono3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:52022:22" # ここを変更していく
+  sono4:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:53022:22" # ここを変更していく
