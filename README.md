@@ -6,7 +6,9 @@ Port forwarding tool. In other words, Pot-au-feu.
 
 # DEMO
 
-![demo](https://raw.githubusercontent.com/wiki/tanaka-x/pot-au-feu/images/image.gif)
+| ![demo](https://raw.githubusercontent.com/wiki/tanaka-x/pot-au-feu/images/image.gif) |
+| :----------------------------------------------------------------------------------: |
+
 
 # Features
 
@@ -17,7 +19,5 @@ This is port forwarding application created with Electron.
 Download the latest version from releases page.
 
 # License
-
-ライセンスを明示する
 
 "Pot-au-feu" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
