@@ -6,28 +6,53 @@
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dbmock": "cd ./portfoward_testdocker/ && docker-compose build && docker-compose up -d",
-    "ncu:update": "ncu -u && npm install"
+    "dbmock": "cd ./portforward_testdocker/ && docker-compose build && docker-compose up -d",
+    "ncu:update": "ncu -u && npm install",
+    "pack:osx": "electron-builder --mac --x64",
+    "pack:win": "electron-builder --win --x64"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.5.2",
     "electron-log": "^4.2.4",
-    "spectre.css": "^0.5.9",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "tether": "^1.4.7",
     "tunnel-ssh": "^4.1.4"
   },
   "devDependencies": {
-    "electron": "^9.2.0",
-    "electron-builder": "^22.8.0",
-    "npm-check-updates": "^7.1.1"
+    "electron": "^10.1.3",
+    "electron-builder": "^22.8.1",
+    "npm-check-updates": "^9.0.4"
   },
   "build": {
-    "appId": "com.electron.worc",
+    "appId": "com.electron.pot-au-fue",
+    "mac": {
+      "icon": "assets/mac/icon.icns",
+      "target": [
+        "dmg"
+      ]
+    },
     "win": {
-      "target": "dmg"
+      "icon": "assets/win/icon.ico",
+      "target": "nsis"
     },
     "directories": {
       "output": "docs"
+    },
+    "files": [
+      "assets",
+      "renderer",
+      "package.json",
+      "package-lock.json",
+      "DataStore.js",
+      "main.js",
+      "Window.js"
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     }
   }
 }
