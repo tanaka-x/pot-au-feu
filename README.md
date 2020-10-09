@@ -4,8 +4,6 @@
 
 Port forwarding tool. In other words, Pot-au-feu.
 
-# DEMO
-
 | ![demo](https://raw.githubusercontent.com/wiki/tanaka-x/pot-au-feu/images/image.gif) |
 | :----------------------------------------------------------------------------------: |
 
